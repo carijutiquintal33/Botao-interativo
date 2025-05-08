@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Botão Interativo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f4f4f4;
+    }
+    #botao {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #botao.confirmado {
+      background-color: #1c7c31;
+    }
+  </style>
+</head>
+<body>
+  <button id="botao" onclick="confirmar()">ACEITAR</button>
+
+  <script>
+    function confirmar() {
+      const botao = document.getElementById("botao");
+      botao.textContent = "CONFIRMADO";
+      botao.classList.add("confirmado");
+    }
+  </script>
+</body>
+</html>
